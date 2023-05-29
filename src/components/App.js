@@ -13,7 +13,7 @@ const App = () => {
             <div><h1>Hover on me</h1></div><br/>
          </Tooltip1><br/><br/>
          <Tooltip2 text2={text2} >
-            <div><h1>Hover on me to see another tooltip</h1></div><br/>
+            <div><p>Hover on me to see another tooltip</p></div><br/>
          </Tooltip2>
          
          
