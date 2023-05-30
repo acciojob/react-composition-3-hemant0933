@@ -10,10 +10,11 @@ const App = () => {
   return (
     <div>
          <Tooltip1 text1={text1} >
-            <div><h1>Hover on me</h1></div><br/>
-         </Tooltip1><br/><br/>
+            <h2>Hover on me</h2>
+         </Tooltip1><br/>
+
          <Tooltip2 text2={text2} >
-            <div><p>Hover on me to see another tooltip</p></div><br/>
+          <p>Hover on me to see another tooltip</p>
          </Tooltip2>
          
          
