@@ -1,23 +1,23 @@
 
 import React, { useState } from "react";
 import './../styles/App.css';
-import Tooltip1 from "./Tooltip1";
-import Tooltip2 from "./Tooltip2";
+import Tooltip from "./Tooltip";
+// import Tooltip2 from "./Tooltip2";
 
 const App = () => {
-  const [text1,setText1] = useState('This is a tooltip');
-  const [text2,setText2] = useState('This is a another tooltip');
+  const [text,setText] = useState('This is a tooltip');
+
   return (
     <div>
-         <Tooltip1 text1={text1} >
-            <h2>Hover on me</h2>
-         </Tooltip1><br/>
+         <Tooltip text={text}>
+            <h2 className="tooltip">Hover on me</h2>  
+         </Tooltip><br/>
+         <Tooltip text={text}>
+           <p className="tooltip">Hover over me to see another tooltip</p>
+         </Tooltip><br/>
+         
 
-         <Tooltip2 text2={text2} >
-          <p>Hover on me to see another tooltip</p>
-         </Tooltip2>
-         
-         
+          
     </div>
   )
 }

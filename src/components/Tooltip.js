@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Tooltip1 = ({ text1, children }) => {
+const Tooltip = ({ text, children }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleMouseEnter = () => {
@@ -12,11 +12,16 @@ const Tooltip1 = ({ text1, children }) => {
   };
 
   return (
-    <div className="tooltip" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      {showTooltip && 
+      <div className="tooltiptext">
+        <h2>{text}</h2>
+      </div>}
       {children}
-      {showTooltip && <div className="tooltip tooltiptext"><h2>{text1}</h2></div>}
+
+      
     </div>
   );
 };
 
-export default Tooltip1;
+export default Tooltip;
